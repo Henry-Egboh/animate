@@ -1,0 +1,296 @@
+
+* {
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    height: 100vh;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 1rem;
+    text-shadow: 2px 1px #fff,
+                4px 2px hsl(0, 7%, 19%);
+    letter-spacing: 1px;
+}
+
+.container {
+    /* margin: 0rem 2rem; */
+    display: grid;
+    grid-template-areas: "nav nav nav nav nav"
+                        "main main main main main"
+                        "sec sec sec sec sec"
+                        "footer footer footer footer footer";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+}
+/* navbar area  */
+.nav {
+    grid-area: nav;
+    background-color: aliceblue;
+    /* background-color: #b7317f;  */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.875rem 4rem;
+}
+
+/* search box area */
+.form {
+    position: relative;
+}
+
+/* search icon */
+.form .img {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 5px;
+    left: 6px;
+}
+
+.form input[type="searchbox"] {
+    padding: 0.875rem;
+    outline: none;
+    border: none;
+    width: 20rem;
+    border-top-left-radius: 0.875rem;
+    border-bottom-left-radius: 0.875rem;
+}
+
+.form input[type="searchbox"]::placeholder {
+    padding-left: 3rem;
+}
+
+.form input[type="searchbox"]:focus {
+    border: 1px solid #ccc;
+}
+/* button for search form */
+.form button {
+    padding: 0.9rem;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #020200;
+    position: absolute;
+    border-top-right-radius: 0.875rem;
+    border-bottom-right-radius: 0.875rem;
+    width: 6rem;
+}
+/* top nav ul */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #b7317f;
+    display: block;
+    padding: 0.75rem 1rem;
+}
+
+/* .navbar ul li a:visited {
+    color: rgb(0, 255, 42);
+} */
+
+.navbar ul li a:hover {
+    color: rgb(115, 145, 145);
+    background-color: rgb(58, 73, 68);
+    box-shadow: 2px 2px 6px 2px #220012;
+    border-radius: 0.75rem;
+    transform: translate3d(23, 45, 60);
+    transition: 1s;
+}
+
+.navbar ul li a:active {
+    color: rgb(43, 0, 255);
+}
+
+/* =========================================================================================================
+=============================================================showcase container ========================================================*/
+.main {
+    grid-area: main;
+    background-color: rgb(56, 83, 83);
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* tower image on the showcase  */
+.head_image .img {
+    width: 25rem;
+    height: 25rem;
+}
+/* contains all showcase texts */
+.main_head {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/* bold showcase text div */
+.head {
+    margin: 0rem 0rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head h2 {
+    font-size: 4rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding: 0rem 0rem 1rem;
+}
+/* div with wow text */
+.wow {
+    display: flex;
+    font-weight: 400;
+    font-size: 4rem;
+    letter-spacing: 3px;
+    align-items: center;
+    color: #e19e74;
+}
+
+/* transition wow on hover */
+.wow:hover p:nth-child(even) {
+	transform: rotateY(360deg);
+	transition: 0.5s;
+}
+
+/* Add rules for steps 10 and 11 */
+.wow:hover p:nth-child(odd) {
+	transform: rotateX(360deg);
+	transition: 1.5s;
+}
+
+/* div with button on showcase section */
+.sub_head {
+    font-weight: 400;
+    font-size: 1rem;
+    width: 50%;
+}
+/* space betwen p text and hr line */
+.sub_head p {
+    padding-top: 2rem;
+}
+/* view more button */
+.sub_head button {
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 2rem;
+    border-radius: 0.75rem;
+}
+
+.sub_head button:hover {
+    background-color: #b7317f;
+    color: #fff;
+    transform: translate(0.98);
+    transition: 1000ms linear 5ms;
+    cursor: pointer;
+}
+/* horizontal line */
+.hr1 {
+    border: 1px solid #ccc;
+}
+
+/* ===========================================================================================================
+======================================================SECTION ============================================================ */
+.sec {
+    grid-area: sec;
+    display: grid;
+    grid-template-areas: "section section section section section1"
+                        "main1 main1 main2 main2 section1"
+                        "main3 main4 main5 main6 ."
+                        "card1 card2 card3 card4 .";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 4rem 1rem;
+    padding: 4rem;
+}
+
+.section, .section1, .main1, .main2, .main3, .main4, .main5, .main6, .card1, .card2, .card3, .card4  {
+    padding: 4rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.section {
+    grid-area: section;
+    /* background-color: #b7317f; */
+}
+
+.section1 {
+    grid-area: section1;
+    /* background-color: blue; */
+}
+
+.main1 {
+    grid-area: main1;
+    /* background-color: rgb(0, 255, 68); */
+}
+
+.main2 {
+    grid-area: main2;
+    /* background-color: rgb(220, 150, 28); */
+}
+
+.main3 {
+    grid-area: main3;
+    background-color: aliceblue;
+}
+
+.main4 {
+    grid-area: main4;
+    background-color: aliceblue;
+}
+
+.main5 {
+    grid-area: main5;
+    background-color: aliceblue;
+}
+
+.main6 {
+    grid-area: main6;
+    background-color: aliceblue;
+}
+
+.card1 {
+    grid-area: card1;
+    background-color: aliceblue;
+}
+
+.card2 {
+    grid-area: card2;
+    background-color: aliceblue;
+}
+
+.card3 {
+    grid-area: card3;
+    background-color: aliceblue;
+}
+
+.card4 {
+    grid-area: card4;
+    background-color: aliceblue;
+}
+/* ===================================================================FOOTER SECTION =================================================
+=================================================================================================================================== */
+.footer {
+    grid-area: footer;
+    background-color: #e19e74;
+}
