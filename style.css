@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@200;300;400;500&display=swap');
 
 * {
     padding: 0rem;
@@ -7,10 +8,13 @@
 
 body {
     font-size: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 400;
     height: 100vh;
+    font-family: 'Anek Devanagari', sans-serif;
 }
+
+/* =============================================================================================================
+=====================================================NAV BAR WITH HEADER SECTION ============================================*/
 
 .title {
     font-weight: 400;
@@ -86,7 +90,11 @@ body {
 /* top nav ul */
 .navbar ul {
     list-style-type: none;
-    display: flex;
+    /* display: flex; */
+}
+
+.navbar ul li {
+    display: inline-block;
 }
 
 .navbar ul li a{
@@ -105,7 +113,7 @@ body {
     background-color: rgb(58, 73, 68);
     box-shadow: 2px 2px 6px 2px #220012;
     border-radius: 0.75rem;
-    transform: translate3d(23, 45, 60);
+    transform: translate3d(23, 45, 35);
     transition: 1s;
 }
 
@@ -115,19 +123,95 @@ body {
 
 /* =========================================================================================================
 =============================================================showcase container ========================================================*/
+/* animate divs in show case container */
+@keyframes box {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+
+    50% {
+        top: 100px;
+        left: 0px;
+        background-color: #32dc6d;
+    }
+
+    100% {
+        top: 0px;
+        left: 150px;
+        background-color: #e19e74;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 0.5rem;
+    }
+}
+
+@keyframes box1 {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+
+    25% {
+        top: -100px;
+        left: 0px;
+        background-color: #fafbfa;
+        width: 6rem;
+        height: 6rem;
+    }
+
+    50% {
+        top: -100px;
+        left: 100px;
+        background-color: #fafbfa;
+    }
+
+    100% {
+        top: 0px;
+        left: 200px;
+        background-color: #c3fffe;
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+
 .main {
     grid-area: main;
     background-color: rgb(56, 83, 83);
     padding: 5rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
+
 /* tower image on the showcase  */
 .head_image .img {
     width: 25rem;
-    height: 25rem;
 }
+
+/* animated div */
+.head_box {
+    width: 15rem;
+    height: 10rem;
+    background-color: #b7317f;
+    animation: box 4s linear 1s forwards;
+    position: relative;
+}
+
+/* animated div */
+.head_box1 {
+    width: 10rem;
+    height: 10rem;
+    background-color: #90de1b;
+    animation: box1 4s linear forwards;
+    position: relative;
+    border-radius: 100%;
+    margin: 1rem;
+}
+
+
+
 /* contains all showcase texts */
 .main_head {
     text-align: center;
@@ -140,7 +224,7 @@ body {
 
 /* bold showcase text div */
 .head {
-    margin: 0rem 0rem 2rem;
+    /* margin: 0rem 0rem 1rem; */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -148,29 +232,28 @@ body {
 }
 
 .head h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     letter-spacing: 1px;
-    font-weight: 500;
-    padding: 0rem 0rem 1rem;
+    font-weight: 400;
 }
 /* div with wow text */
-.wow {
+.watch {
     display: flex;
     font-weight: 400;
-    font-size: 4rem;
-    letter-spacing: 3px;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
     align-items: center;
     color: #e19e74;
 }
 
 /* transition wow on hover */
-.wow:hover p:nth-child(even) {
+.watch:hover p:nth-child(even) {
 	transform: rotateY(360deg);
 	transition: 0.5s;
 }
 
 /* Add rules for steps 10 and 11 */
-.wow:hover p:nth-child(odd) {
+.watch:hover p:nth-child(odd) {
 	transform: rotateX(360deg);
 	transition: 1.5s;
 }
@@ -221,6 +304,7 @@ body {
     grid-template-rows: auto;
     gap: 4rem 1rem;
     padding: 4rem;
+    background-color: #f4d7c5;
 }
 
 .section, .section1, .main1, .main2, .main3, .main4, .main5, .main6, .card1, .card2, .card3, .card4  {
@@ -249,6 +333,7 @@ body {
     /* background-color: rgb(220, 150, 28); */
 }
 
+/* first four cards */
 .main3 {
     grid-area: main3;
     background-color: aliceblue;
@@ -269,6 +354,7 @@ body {
     background-color: aliceblue;
 }
 
+/* second four cards */
 .card1 {
     grid-area: card1;
     background-color: aliceblue;
@@ -292,5 +378,7 @@ body {
 =================================================================================================================================== */
 .footer {
     grid-area: footer;
-    background-color: #e19e74;
+    color: #fff;
+    background-color: rgb(115, 145, 145);
+    /* background-color: rgb(58, 73, 68); */
 }
