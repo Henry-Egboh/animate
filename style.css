@@ -169,7 +169,7 @@ body {
     100% {
         top: 0px;
         left: 200px;
-        background-color: #c3fffe;
+        background-color: aliceblue;
         width: 8rem;
         height: 8rem;
     }
@@ -304,7 +304,7 @@ body {
     grid-template-rows: auto;
     gap: 4rem 1rem;
     padding: 4rem;
-    background-color: #f4d7c5;
+    background-color: #faebe2;
 }
 
 .section, .section1, .main1, .main2, .main3, .main4, .main5, .main6, .card1, .card2, .card3, .card4  {
@@ -376,9 +376,97 @@ body {
 }
 /* ===================================================================FOOTER SECTION =================================================
 =================================================================================================================================== */
+/* footer contents */
 .footer {
     grid-area: footer;
     color: #fff;
-    background-color: rgb(115, 145, 145);
-    /* background-color: rgb(58, 73, 68); */
+    background-color: rgb(56, 83, 83);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+/* ist row of footer contents */
+.footer1 {
+    display: flex;
+    padding: 3rem;
+}
+
+/* image inside the footer section */
+.footer_img {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+}
+
+/* set the contents of the 1st row of footer1 to column*/
+.base {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+/* center the list items */
+.base:nth-of-type(2) {
+    align-items: center;
+}
+
+/* div for the list items */
+.row1 {
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+}
+/* space between ist and 2nd rows of list items */
+.row2 {
+    margin-top: 2rem;
+}
+
+/* align the last list items */
+.row2 .list:nth-of-type(2) {
+    margin-left: 1.8rem;
+}
+
+/* list item headers */
+.list h3 {
+    color: #e19e74;
+}
+
+/* style list items */
+.list ul {
+    list-style: none;
+}
+
+.list ul li {
+   padding: 0.5rem 0rem;
+}
+
+.list ul li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.list ul li a:hover {
+    border-bottom: 1px solid #faebe2;
+    color: #d41f89;
+}
+
+/* privacy policy section */
+.footer2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: aliceblue;
+    color: #000;
+    padding: 0.5rem 0rem;
+}
+
+.footer2 a {
+    text-decoration: none;
+    color: #000;
+}
+
+.footer2 a:hover {
+    color: #d41f89;
 }
