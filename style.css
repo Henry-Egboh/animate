@@ -308,7 +308,7 @@ body {
 }
 
 .section, .section1, .main1, .main2, .main3, .main4, .main5, .main6, .card1, .card2, .card3, .card4  {
-    padding: 4rem;
+    /* padding: 4rem; */
     border-radius: 0.5rem;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
 }
@@ -318,9 +318,41 @@ body {
     /* background-color: #b7317f; */
 }
 
+/* ===============================================================
+========================================================aside contents =============================================*/
 .section1 {
     grid-area: section1;
-    /* background-color: blue; */
+    padding: 2rem;
+}
+/* social icons */
+.aside_images img {
+    width: 1rem;
+    margin: 0rem 0.5rem 1rem 0.8rem;
+}
+
+/* list items */
+.aside_list {
+    text-align: center;
+}
+
+.aside_list ul {
+    list-style-type: none;
+}
+
+.aside_list ul li a {
+    text-decoration: none;
+    color: #b7317f;
+    display: block;
+    padding: 0.5rem 0rem;
+}
+
+.aside_list ul li a:hover {
+    color: rgb(115, 145, 145);
+}
+
+/* spacing font awesome angle icons */
+.aside_list .fa {
+    padding: 0rem 0.8rem;
 }
 
 .main1 {
