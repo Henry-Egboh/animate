@@ -341,7 +341,7 @@ body {
 
 /* =========================================================================================================
 ================================================== SECTION ============================================================ */
-
+/* the biggest image section */
 .section {
     grid-area: section;
     display: flex;
@@ -352,12 +352,14 @@ body {
     padding: 0.2rem 0rem;
 }
 
+/* div with the big image */
 .banner:first-of-type {
     flex: 2;
     text-align: center;
     font-weight: 400;
 }
 
+/* div with image and text  */
 .banner:last-of-type {
     flex: 1;
     text-align: center;
@@ -365,11 +367,11 @@ body {
     /* align-self: center; */
 }
 
-
 .banner:last-of-type p {
     padding: 1rem 0rem;
 }
 
+/* inner div with background color */
 .button {
     background-color: rgb(56, 83, 83);
     padding: 0.3rem;
@@ -380,12 +382,6 @@ body {
 .button a {
     color: #e19e74;
 }
-
-/* general styling */
-/* .main1, .main2, .main3, .main4, .main5, .main6, .card1, .card2, .card3, .card4 > p {
-    text-align: center;
-    font-weight: 400;
-} */
 
 /* ===============================================================
 ========================================================aside contents =============================================*/
@@ -543,8 +539,11 @@ body {
 }
 
 /* list item headers */
-.list h3 {
+.list h3, .base h4 {
     color: #e19e74;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 /* style list items */
