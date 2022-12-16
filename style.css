@@ -313,12 +313,13 @@ body {
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
-.section:hover {
-    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.4);
-    opacity: 0.98;
+.section:hover, .main1:hover, .main2:hover, .main3:hover, .main4:hover, .main5:hover, .main6:hover, .card1:hover, 
+.card2:hover, .card3:hover, .card4:hover {
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
+    opacity: 0.92;
     transform: translate(.98);
-    transition: box-shadow 4ms ease-in-out;
-    transition: opacity 400ms ease-in;
+    transition: box-shadow 400ms ease-in-out;
+    transition: opacity 400ms ease-in-out;
 }
 
 /* general p styling */
