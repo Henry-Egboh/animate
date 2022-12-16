@@ -304,7 +304,6 @@ body {
     grid-template-rows: auto;
     gap: 4rem 1rem;
     padding: 4rem;
-    /* background-color: #faebe2; */
     background-color: aliceblue;
 }
 
@@ -314,10 +313,78 @@ body {
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
+.section:hover {
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.4);
+    opacity: 0.98;
+    transform: translate(.98);
+    transition: box-shadow 4ms ease-in-out;
+    transition: opacity 400ms ease-in;
+}
+
+/* general p styling */
+.sec p {
+    text-align: center;
+    font-weight: 400;
+    padding: 0.2rem 0rem;
+}
+
+/* all anchor tags inside the sec container */
+.sec a {
+    text-decoration: none;
+    color: #b7317f;
+}
+/* all hover in sec container */
+.sec a:hover {
+    color: rgb(115, 145, 145);
+}
+
+/* =========================================================================================================
+================================================== SECTION ============================================================ */
+
 .section {
     grid-area: section;
-    /* background-color: #b7317f; */
+    display: flex;
+    /* gap: 2rem; */
 }
+
+.section p {
+    padding: 0.2rem 0rem;
+}
+
+.banner:first-of-type {
+    flex: 2;
+    text-align: center;
+    font-weight: 400;
+}
+
+.banner:last-of-type {
+    flex: 1;
+    text-align: center;
+    padding: 2rem;
+    /* align-self: center; */
+}
+
+
+.banner:last-of-type p {
+    padding: 1rem 0rem;
+}
+
+.button {
+    background-color: rgb(56, 83, 83);
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    font-weight: 400;
+}
+
+.button a {
+    color: #e19e74;
+}
+
+/* general styling */
+/* .main1, .main2, .main3, .main4, .main5, .main6, .card1, .card2, .card3, .card4 > p {
+    text-align: center;
+    font-weight: 400;
+} */
 
 /* ===============================================================
 ========================================================aside contents =============================================*/
@@ -326,9 +393,10 @@ body {
     padding: 2rem;
 }
 /* social icons */
-.aside_images {
+/* .aside_images {
     border-bottom: #e19e74 solid 1px;
-}
+} */
+
 .aside_images img {
     width: 1rem;
     margin: 0rem 0.5rem 1rem 0.8rem;
@@ -341,6 +409,10 @@ body {
 
 .aside_list ul {
     list-style-type: none;
+}
+
+.aside_list ul li {
+    border-bottom: #ecc solid 1px;
 }
 
 .aside_list ul li a {
@@ -360,15 +432,14 @@ body {
 }
 
 .main1 {
-    grid-area: main1;
-    /* background-color: rgb(0, 255, 68); */
+    grid-area: main1;  
 }
 
 .main2 {
     grid-area: main2;
-    /* background-color: rgb(220, 150, 28); */
 }
-
+/* ===================================================================================
+===================================================================================== */
 /* first four cards */
 .main3 {
     grid-area: main3;
@@ -390,6 +461,12 @@ body {
     background-color: aliceblue;
 }
 
+.img_tiles {
+    width: 100%;
+}
+
+/* ======================================================================================================
+=================================================================================================== */
 /* second four cards */
 .card1 {
     grid-area: card1;
@@ -475,7 +552,7 @@ body {
 }
 
 .list ul li {
-   padding: 0.5rem 0rem;
+   padding: 0.2rem 0rem;
 }
 
 .list ul li a {
